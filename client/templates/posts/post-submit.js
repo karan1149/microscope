@@ -4,7 +4,7 @@ Template.postSubmit.events({
     e.preventDefault();
     Meteor.call('addPost', e.target.url.value, e.target.title.value, function(error, result) {
       if (error)
-        return alert(error.reason);
+        return throwError(error.reason);
       Router.go('postPage', {_id: result});
     });
   }
