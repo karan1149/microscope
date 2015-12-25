@@ -5,3 +5,6 @@ Meteor.publish('comments', function(id) {
   check(id, String);
   return Comments.find({postId:id});
 });
+Meteor.publish('notifications', function() {
+  return Notifications.find();
+});
