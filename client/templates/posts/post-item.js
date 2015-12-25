@@ -5,6 +5,6 @@ Template.postItem.helpers({
     return a.hostname;
   },
   ownPost: function() {
-    return this.author == Meteor.user().username;
+    return this.userId == Meteor.userId();
   }
 });
