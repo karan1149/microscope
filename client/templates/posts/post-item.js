@@ -8,3 +8,9 @@ Template.postItem.helpers({
     return this.userId == Meteor.userId();
   }
 });
+Template.postItem.events({
+  'click .upvote': function(e) {
+    e.preventDefault();
+    Meteor.call('upvote', this._id);
+  }
+});
