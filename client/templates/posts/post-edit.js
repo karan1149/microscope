@@ -1,5 +1,5 @@
 Template.postEdit.events({
-  'submit form': function(e) {
+  'submit form': function(e, template) {
     e.preventDefault();
 
 
@@ -16,7 +16,7 @@ if (errors.title || errors.url)
         // display the error to the user
         throwError(error.reason);
       } else {
-        Router.go('postPage', {_id: currentPostId});
+       Router.go('postPage', {_id: template.data._id});
       }
     });
   },
