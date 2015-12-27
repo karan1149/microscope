@@ -27,7 +27,7 @@ if (errors.title || errors.url)
     if (confirm("Delete this post?")) {
       var currentPostId = this._id;
       Posts.remove(currentPostId);
-      Router.go('postsList');
+      Router.go('home');
     }
   }
 });
