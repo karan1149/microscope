@@ -55,7 +55,8 @@ body {
   .post .upvote {
     display: block;
     margin: 7px 12px 0 0;
-    float: left; }
+    float: left;
+    transition: all 300ms 0ms ease; }
   .post .post-content {
     float: left; }
     .post .post-content h3 {
